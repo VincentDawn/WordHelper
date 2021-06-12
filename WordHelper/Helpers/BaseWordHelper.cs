@@ -5,7 +5,7 @@ using WordHelper.Interfaces;
 
 namespace WordHelper.Helpers
 {
-    public class WordHelper : IWordHelper
+    public class BaseWordHelper : IWordHelper
     {
         public bool IsAnagram(string word1, string word2)
         {
