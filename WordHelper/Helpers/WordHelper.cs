@@ -20,7 +20,7 @@ namespace WordHelper.Helpers
             return PrepareString(word) == String.Concat(PrepareString(word).Reverse());
         }
 
-        private string PrepareString(string word)
+        protected string PrepareString(string word)
         {
             Regex regex = new Regex(@"[^a-zA-Z]");
             return regex.Replace(word, "").ToLower();
