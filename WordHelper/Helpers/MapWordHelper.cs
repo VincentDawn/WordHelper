@@ -18,10 +18,10 @@ namespace WordHelper.Helpers
 
             // Add to buckets
             Dictionary<char, int> dictionary = new Dictionary<char, int>();
-            foreach(var c in word1)
+            foreach (var c in word1)
             {
                 int count = dictionary.GetValueOrDefault(c, -1);
-                if(count >= 0)
+                if (count >= 0)
                 {
                     dictionary[c] = ++count;
                 }
@@ -32,7 +32,7 @@ namespace WordHelper.Helpers
             }
 
             // Remove from buckets
-            foreach(var c in word2)
+            foreach (var c in word2)
             {
                 int count = dictionary.GetValueOrDefault(c, 0);
                 if (count > 0)
@@ -46,7 +46,6 @@ namespace WordHelper.Helpers
             }
 
             return true;
-
         }
     }
 }

@@ -21,10 +21,9 @@ namespace WordHelper
 
             Console.WriteLine("Formal");
             CheckWords(formalLogicWordHelper, words);
-            
+
             Console.WriteLine("Map");
             CheckWords(mapWordHelper, words);
-
         }
 
         public static void CheckWords(IWordHelper helper, List<string> words)
