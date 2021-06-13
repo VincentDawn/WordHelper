@@ -44,7 +44,7 @@ namespace WordHelperUnitTests
         {
             IWordHelper wordHelper = new BaseWordHelper();
 
-            Assert.Throws<ArgumentNullException>(() => wordHelper.IsPalindrome("Banana"));
+            Assert.Throws<ArgumentNullException>(() => wordHelper.IsPalindrome(null));
         }
     }
 }
