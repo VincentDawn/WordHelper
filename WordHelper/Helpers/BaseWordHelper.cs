@@ -17,6 +17,11 @@ namespace WordHelper.Helpers
 
         public bool IsPalindrome(string word)
         {
+            if (String.IsNullOrWhiteSpace(word))
+            {
+                throw new ArgumentNullException();
+            }
+
             return PrepareString(word) == String.Concat(PrepareString(word).Reverse());
         }
 

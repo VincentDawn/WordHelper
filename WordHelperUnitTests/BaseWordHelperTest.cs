@@ -1,4 +1,5 @@
-﻿using WordHelper.Helpers;
+﻿using System;
+using WordHelper.Helpers;
 using WordHelper.Interfaces;
 using Xunit;
 
@@ -36,6 +37,14 @@ namespace WordHelperUnitTests
             IWordHelper wordHelper = new BaseWordHelper();
 
             Assert.False(wordHelper.IsPalindrome("Banana"));
+        }
+
+        [Fact]
+        public void PalindromeArgumentNull()
+        {
+            IWordHelper wordHelper = new BaseWordHelper();
+
+            Assert.Throws<ArgumentNullException>(() => wordHelper.IsPalindrome("Banana"));
         }
     }
 }
